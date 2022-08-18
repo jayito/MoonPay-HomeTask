@@ -16,14 +16,13 @@ position at MoonPay. It contains three sections: "Frontend", "Backend" and "Foll
 together include a series of tests involving JavaScript, React, Node.js, HTML and CSS.
 
 ## Frontend
+![Front-end layout](./frontend_layout.png)
 
 For the frontend portion of the test, use the `/frontend` folder. There are 7 features we'd like to add:
 
 1. Fetch and display the list of currencies available on MoonPay (see endpoint below).
 2. Add a responsive functionality for the layout, which will display one column on mobile
    devices, two columns on tablet devices, and three columns on desktops.
-
-![Front-end layout](./frontend_layout.png)
 
 3. Add a toggle to control if currencies not supported in the US should be displayed.
 4. Add a toggle to control if currencies not available in test mode should be displayed.
