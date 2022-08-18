@@ -119,15 +119,20 @@ function App() {
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center pb-12">
         MoonPay Currencies
       </h1>
-      <div className="flex justify-between items-center mb-4">
-        <div className="flex gap-6 items-center">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-4">
+        <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center">
           <Radio label="Is supported in US" id="supported-us" val={isSupportedUS} onChange={(e: any) => supportChangeHandler(e)} />
           <Radio label="Is available in Test Mode" id="available-test-mode" val={isAvailableTestMode} onChange={(e: any) => availableChangeHandler(e)} />
-          <button className="border-2 border-blue-500 bg-blue-500 hover:bg-white text-white hover:text-black rounded-lg px-4 py-1" onClick={suffleHandler}>
+          <button className="border-2 border-blue-500 bg-blue-500 hover:bg-white text-white hover:text-black rounded-lg px-4 py-1 hidden lg:block" onClick={suffleHandler}>
             Random Shuffle
           </button>
         </div>
-        <SelectBox val={sortBy} onChange={(val: string) => sortByHandler(val)} />
+        <div className="mt-6 lg:mt-0 flex flex-col sm:flex-row justify-between gap-6 w-full lg:w-auto">
+          <button className="border-2 border-blue-500 bg-blue-500 hover:bg-white text-white hover:text-black rounded-lg px-4 py-1 lg:hidden" onClick={suffleHandler}>
+            Random Shuffle
+          </button>
+          <SelectBox val={sortBy} onChange={(val: string) => sortByHandler(val)} />
+        </div>
       </div>
       <div className="grid grid-cols-12 gap-4 md:gap-8 lg:gap-12">
         {filteredCurrencies.map((currency, index) => (
