@@ -43,6 +43,7 @@ grading your design skills here.
 - **MoonPay API `GET /v3/currencies` endpoint:** https://api.moonpay.com/v3/currencies
 
 ## Backend
+![Backend-end layout](./backend_layout.png)
 
 For the backend portion of the test, use the `/backend` folder. We'd like to write some code that achieves the following:
 
